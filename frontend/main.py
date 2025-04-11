@@ -7,7 +7,7 @@ from app.chunker import chunk_text
 from app.embedder import create_embeddings, store_in_faiss
 from app.retriever import retrieve
 from app.generator import generate_response
-from app.pdf_exporter import export_chat_to_pdf
+from app.pdf_exporter import export_text_to_pdf
 from sentence_transformers import SentenceTransformer
 
 
@@ -64,6 +64,6 @@ if 'index' in st.session_state:
 if st.session_state.chat_log:
     if st.button("📄 Download Chat as PDF"):
         combined_md = "\n\n---\n\n".join(st.session_state.chat_log)
-        export_chat_to_pdf(combined_md, "chat_output.pdf")
+        export_text_to_pdf(combined_md, "chat_output.pdf")
         with open("chat_output.pdf", "rb") as f:
             st.download_button("Download PDF", f, file_name="chat_output.pdf", mime="application/pdf")
