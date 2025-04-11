@@ -21,7 +21,7 @@ faiss-cpu==1.8.0  # OR use chromadb==0.4.24 if you prefer ChromaDB
 
 # PDF Export
 markdown==3.6
-fpdf
+reportlab==4.0.9
 
 # Environment + dotenv
 python-dotenv==1.0.1
