@@ -1,3 +1,5 @@
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 from app.scraper import scrape_website
 from app.chunker import chunk_text
