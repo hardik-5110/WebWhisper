@@ -1,4 +1,5 @@
 import sys
+import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 from app.scraper import scrape_website
@@ -8,7 +9,7 @@ from app.retriever import retrieve
 from app.generator import generate_response
 from app.pdf_exporter import export_chat_to_pdf
 from sentence_transformers import SentenceTransformer
-import os
+
 
 # Load embedding model once
 embedder_model = SentenceTransformer("all-MiniLM-L6-v2")
