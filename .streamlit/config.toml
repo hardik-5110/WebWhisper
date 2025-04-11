@@ -1,0 +1,13 @@
+[server]
+port = 8501
+folderWatchBlacklist = ["venv", ".venv", "torch"]
+
+[theme]
+primaryColor = "#4a90e2"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#1c1c1c"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,34 @@
+# Core frameworks
+streamlit==1.33.0
+
+# Scraping
+beautifulsoup4==4.12.3
+requests==2.31.0
+
+# LangChain for RAG + chunking
+langchain==0.1.13
+langchain-community==0.0.29
+langchain-core==0.1.34
+
+# Hugging Face for embeddings
+sentence-transformers==2.6.1
+transformers==4.39.3
+torch==2.2.1
+weasyprint
+
+# Vector store
+faiss-cpu==1.8.0  # OR use chromadb==0.4.24 if you prefer ChromaDB
+
+# PDF Export
+markdown==3.6
+pdfkit==1.0.0
+wkhtmltopdf==0.12.6 # Install separately in sysytem
+weasyprint #  Install separately in sysytem
+GTKruntime # Install separately in sysytem
+
+
+# Environment + dotenv
+python-dotenv==1.0.1
+
+# Optional (for markdown alignment and formatting)
+markdown2==2.4.12
