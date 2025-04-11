@@ -1,10 +1,10 @@
 import streamlit as st
-from app.scraper import scrape_website
-from app.chunker import chunk_text
-from app.embedder import create_embeddings, store_in_faiss
-from app.retriever import retrieve
-from app.generator import generate_response
-from app.pdf_exporter import export_chat_to_pdf
+from ..app.scraper import scrape_website
+from ..app.chunker import chunk_text
+from ..app.embedder import create_embeddings, store_in_faiss
+from ..app.retriever import retrieve
+from ..app.generator import generate_response
+from ..app.pdf_exporter import export_chat_to_pdf
 from sentence_transformers import SentenceTransformer
 import os
 
