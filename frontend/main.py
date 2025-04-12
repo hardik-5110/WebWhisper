@@ -1,8 +1,11 @@
 import sys
 import os
+import streamlit as st 
+
+st.set_page_config(page_title="Chat with Website", layout="centered")
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import streamlit as st
 from app.scraper import scrape_website
 from app.chunker import chunk_text
 from app.embedder import create_embeddings, store_in_faiss
