@@ -1,11 +1,12 @@
 import sys
 import os
-import streamlit as st 
+import streamlit as st
+
 
 st.set_page_config(page_title="Chat with Website", layout="centered")
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app.scraper import scrape_website
 from app.chunker import chunk_text
 from app.embedder import create_embeddings, store_in_faiss
@@ -14,10 +15,7 @@ from app.generator import generate_response
 from app.pdf_exporter import export_text_to_pdf
 from sentence_transformers import SentenceTransformer
 
-# Load embedding model once
-embedder_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# --- Theme Management ---
 themes = {
     "Default": {"primary": "#4F8BF9", "background": "#FFFFFF", "text": "#000000"},
     "Dark": {"primary": "#1DB954", "background": "#121212", "text": "#FFFFFF"},
@@ -55,6 +53,7 @@ def apply_theme(theme_dict):
     )
 
 apply_theme(theme)
+
 
 # --- UI Layout ---
 st.set_page_config(page_title="Chat with Website", layout="centered")
